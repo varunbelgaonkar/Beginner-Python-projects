@@ -11,7 +11,7 @@ root.geometry("500x500")
 def get_aqi():	
 	city = e_city.get().capitalize()
 	try:	
-		url = f"https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69?api-key=579b464db66ec23bdd0000011db07e15614c408d7c4cd9c353884a91&format=json&offset=0&limit=7&filters[city]={city}"
+		url = f"https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69?api-key={enter your api key}1&format=json&offset=0&limit=7&filters[city]={city}"
 		r = requests.get(url)
 		api = json.loads(r.text)
 		print(api["records"])
